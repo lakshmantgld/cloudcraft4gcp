@@ -13,3 +13,14 @@ html { height: 100%; }
   width: 100%;
   text-align: center;
 }
+#footer{
+  background: black;
+  display: block;
+  height: 80px;
+}
+#toolbarspanText{
+  font-size: 35px;
+  color: white;
+  padding-left: 50px;
+  font-family: 'Roboto', sans-serif;
+}

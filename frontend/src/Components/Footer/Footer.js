@@ -4,9 +4,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { withStyles, createStyleSheet } from 'material-ui/styles';
 import BottomNavigation, { BottomNavigationButton } from 'material-ui/BottomNavigation';
-import RestoreIcon from 'material-ui-icons/Restore';
-import FavoriteIcon from 'material-ui-icons/Favorite';
-import LocationOnIcon from 'material-ui-icons/LocationOn';
+import FiberManualRecord from 'material-ui-icons/FiberManualRecord';
 
 const styleSheet = createStyleSheet('SimpleBottomNavigation', {
   root: {
@@ -31,10 +29,23 @@ class SimpleBottomNavigation extends Component {
 
     return (
       <div className={classes.root}>
-        <BottomNavigation value={value} onChange={this.handleChange} showLabels>
-          <BottomNavigationButton label="Recents" icon={<RestoreIcon />} />
-          <BottomNavigationButton label="Favorites" icon={<FavoriteIcon />} />
-          <BottomNavigationButton label="Nearby" icon={<LocationOnIcon />} />
+        <BottomNavigation value={value} onChange={this.handleChange} showLabels id="footer">
+          <div className="row" style={{paddingTop: '14px'}}>
+            <div className="col-md-4">
+              <span id="toolbarspanText">Toolbar Component</span>
+            </div>
+            <div className="col-md-8">
+              <BottomNavigationButton icon={<FiberManualRecord />} style={{color: 'white'}}/>
+              <BottomNavigationButton icon={<FiberManualRecord />} style={{color: 'white'}}/>
+              <BottomNavigationButton icon={<FiberManualRecord />} style={{color: 'white'}}/>
+              <BottomNavigationButton icon={<FiberManualRecord />} style={{color: 'white'}}/>
+              <BottomNavigationButton icon={<FiberManualRecord />} style={{color: 'white'}}/>
+              <BottomNavigationButton icon={<FiberManualRecord />} style={{color: 'white'}}/>
+              <BottomNavigationButton icon={<FiberManualRecord />} style={{color: 'white'}}/>
+              <BottomNavigationButton icon={<FiberManualRecord />} style={{color: 'white'}}/>
+              <BottomNavigationButton icon={<FiberManualRecord />} style={{color: 'white'}}/>
+            </div>
+          </div>
         </BottomNavigation>
       </div>
     );
